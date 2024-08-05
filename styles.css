@@ -28,7 +28,8 @@ body {
   margin-right: 10px; /* Espaço entre o campo de tarefa e o campo de data */
 }
 
-.input-date, .input-time {
+.input-date,
+.input-time {
   border: none;
   border-radius: 5px;
   height: 40px;
@@ -56,8 +57,8 @@ body {
   height: 40px;
   background-color: #598d83;
   color: #ffffff;
-  font-size: 17px;
-  padding: 0 15px;
+  font-size: 1em;
+  padding: 0 12px;
   cursor: pointer;
   font-weight: 700;
   width: 100px;
@@ -144,11 +145,7 @@ img {
   }
 
   .button-add-task {
-    width: 60px;
+    width: 75px;
     font-size: 14px;
   }
 }
-
-
-
-
