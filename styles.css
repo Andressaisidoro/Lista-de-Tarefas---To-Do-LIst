@@ -13,6 +13,7 @@ body {
 .container {
   background-color: #8ecfba;
   width: 500px;
+  max-width: 100%;
   border-radius: 10px;
   padding: 20px;
   margin: 100px auto 0;
@@ -21,9 +22,32 @@ body {
 .input-task {
   border: none;
   border-radius: 5px;
-  width: 300px;
+  width: calc(100% - 220px); /* Ajustado para acomodar a data, hora e o botão */
   height: 40px;
   padding-left: 10px;
+  margin-right: 10px; /* Espaço entre o campo de tarefa e o campo de data */
+}
+
+.input-date, .input-time {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.input-date {
+  width: 120px;
+  margin-right: 10px; /* Espaço entre o campo de data e o campo de hora */
+}
+
+.input-time {
+  width: 100px;
+  margin-right: 10px; /* Espaço entre o campo de hora e o botão */
+}
+
+.container-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Espaçamento inferior entre os campos e a lista */
 }
 
 .button-add-task {
@@ -34,9 +58,9 @@ body {
   color: #ffffff;
   font-size: 17px;
   padding: 0 15px;
-  float: right;
   cursor: pointer;
   font-weight: 700;
+  width: 100px;
 }
 
 .button-add-task:hover {
@@ -80,3 +104,51 @@ img {
   background-color: #598d83;
   text-decoration: line-through;
 }
+
+/* Media queries para tamanhos menores */
+@media (max-width: 768px) {
+  .input-task {
+    width: calc(100% - 200px); /* Ajustado para telas menores */
+  }
+
+  .input-date {
+    width: 100px;
+  }
+
+  .input-time {
+    width: 90px;
+  }
+
+  .button-add-task {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto 0;
+  }
+
+  .input-task {
+    width: calc(100% - 180px); /* Ajustado para telas muito pequenas */
+  }
+
+  .input-date {
+    width: 80px;
+  }
+
+  .input-time {
+    width: 80px;
+  }
+
+  .button-add-task {
+    width: 60px;
+    font-size: 14px;
+  }
+}
+
+
+
+
